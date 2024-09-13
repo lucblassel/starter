@@ -5,7 +5,7 @@ return {
     opts = require "configs.conform",
   },
 
-  -- These are some examples, uncomment them if you want to see them work!
+  -- NeoVim LSP Config
   {
     "neovim/nvim-lspconfig",
     config = function()
@@ -13,13 +13,26 @@ return {
     end,
   },
 
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
+  -- TreeSitter Grammars
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = {
+      ensure_installed = {
+        "vim",
+        "lua",
+        "vimdoc",
+        "html",
+        "css",
+        "rust",
+        "go",
+        "python",
+        "bash",
+        "markdown",
+        "latex",
+        "c",
+        "cpp",
+        "javascript",
+      },
+    },
+  },
 }
