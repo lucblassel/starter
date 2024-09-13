@@ -35,4 +35,13 @@ return {
       },
     },
   },
+
+  -- Open files in neovim from neovim terminal
+  {
+    "willothy/flatten.nvim",
+    opts = {
+      window = { open = "alternate", diff = "tab_vsplit", focus = "first" },
+    },
+    lazy = false,
+  },
 }

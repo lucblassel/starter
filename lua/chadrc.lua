@@ -2,12 +2,14 @@
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 -- Please read that file to know all available options :(
 
----@type ChadrcConfig
+-- ---@type ChadrcConfig
+---@class ChadrcConfig
 local M = {}
 
--- CUstomized theme
+-- Customized theme
 M.base46 = {
   theme = "catppuccin_frappe",
+  -- theme = "kanagawa",
   hl_override = {
     Comment = { italic = true },
     ["@comment"] = { italic = true },
@@ -26,6 +28,37 @@ M.term = {
   },
 }
 
+-- UI tweaks
+M.ui = {
+  nvdash = {
+    load_on_startup = true,
+    buttons = {
+      { "󱇧  New Buffer", "Spc b  ", "tabnew" },
+      { "  Find File", "Spc f f", "Telescope find_files" },
+      { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
+      { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
+      { "  Bookmarks", "Spc m a", "Telescope marks" },
+      { "  Mappings", "Spc c h", "NvCheatsheet" },
+    },
+    header = {
+      "████████████▀█▀████████████████████",
+      "████████▀███▀▀▀█████▀█▀▀▀█▀█▀██████",
+      "████████ █▀█ ▀ █▀▀▀█ █ ▀ █ █ ██████",
+      "█████▀▀█ ▀ ▀▀▀ █ ▀ ▀ ▀▀ ▀▀ █ ██████",
+      "███▀█ ▀▀ █▀█▀▀█▀ █▀▀▀▀▀▀▀▀▀▀▀▀▀▀███",
+      "███ ▀▀▀▀█▀▀▀█ █▀█▀▀▀█▀█▀▀▀█▀█▀█ █▀█",
+      "█▀█ █ ▀ █ ▀ █ █ █ ▀ █ █ ▀ █▀▀▀█ █ █",
+      "█ ▀ █▀█ ▀▀ ▀▀ █ █▀▀ █ █▀█ █ ▀ ▀ █ █",
+      "█████ ▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀ █ ▀ ▀▀▀ █████",
+      "▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀",
+    },
+  },
+  telescope = {
+    style = "bordered",
+  },
+}
+
+-- Tools for mason to install
 M.mason = {
   pkgs = {
     -- Python
