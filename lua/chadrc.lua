@@ -64,6 +64,8 @@ M.mason = {
     -- Python
     "ruff",
     "pyright",
+    -- Snakemake
+    "snakefmt",
     -- JS/HTML/CSS
     "eslint-lsp",
     "html-lsp",
@@ -71,7 +73,7 @@ M.mason = {
     "prettierd",
     -- Rust
     "rust-analyzer",
-    "rustfmt",
+    -- "rustfmt", -- Use the system wide one
     -- Lua
     "lua-language-server",
     "stylua",

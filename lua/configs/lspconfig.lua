@@ -22,6 +22,8 @@ local servers = {
   "bashls",
   -- C/C++
   "clangd",
+  -- GO
+  "gopls",
 }
 
 local nvlsp = require "nvchad.configs.lspconfig"

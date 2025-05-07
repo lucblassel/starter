@@ -10,6 +10,8 @@ local options = {
     cpp = { "clang-format" },
     bash = { "shfmt" },
     latex = { "latexindent" },
+    go = { "gofumpt" },
+    snakemake = { "snakefmt" },
   },
 
   format_on_save = {
